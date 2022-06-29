@@ -35,14 +35,28 @@ window.addEventListener('load', () => {
 		task_delete_el.classList.add('delete');
 		task_delete_el.innerText = 'Delete';
 
+		const task_upload_el = document.createElement('button');
+		task_upload_el.classList.add('upload');
+		task_upload_el.innerText = 'Upload';
+
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
+		task_actions_el.appendChild(task_upload_el);
 
 		task_el.appendChild(task_actions_el);
 
 		list_el.appendChild(task_el);
 
 		input.value = '';
+
+		function doupload() {
+			let data = document.getElementById("file").files[0];
+			let entry = document.getElementById("file").files[0];
+			console.log('doupload',entry,data)
+			fetch('uploads/' + encodeURIComponent(entry.name), {method:'PUT',body:data});
+			alert('your file has been uploaded');
+			location.reload();
+		};
 
 		task_edit_el.addEventListener('click', (e) => {
 			if (task_edit_el.innerText.toLowerCase() == "edit") {
@@ -54,6 +68,10 @@ window.addEventListener('load', () => {
 				task_input_el.setAttribute("readonly", "readonly");
 			}
 		});
+
+		task_upload_el.addEventListener('click', (e) => {
+			task_input_el.doupload();
+		})
 
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
