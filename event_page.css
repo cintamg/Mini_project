@@ -151,6 +151,10 @@ main {
 	-webkit-text-fill-color: transparent;
 }
 
+.task .actions .upload {
+	color:  yellowgreen;
+}
+
 .task .actions .delete {
 	color: crimson;
 }
