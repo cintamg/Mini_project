@@ -80,6 +80,13 @@ input, button {
 	opacity: 0.6;
 }
 
+#new-task-upload {
+	color: yellowgreen;
+	font-size: 1.25rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
 main {
 	flex: 1 1 0%;
 	max-width: 800px;
@@ -149,10 +156,6 @@ main {
 	background-image: linear-gradient(to right, var(--pink), var(--purple));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-.task .actions .upload {
-	color:  yellowgreen;
 }
 
 .task .actions .delete {
