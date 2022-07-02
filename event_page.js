@@ -56,10 +56,6 @@ window.addEventListener('load', () => {
 			}
 		});
 
-		task_upload_el.addEventListener('click', (e) => {
-			task_input_el.doupload();
-		})
-
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
 		});
