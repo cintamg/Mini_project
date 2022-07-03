@@ -81,6 +81,9 @@ input, button {
 }
 
 #new-task-upload {
+    position: relative;
+	left: 1175px;
+	top: -580px;
 	color: yellowgreen;
 	font-size: 1.25rem;
 	font-weight: 700;
