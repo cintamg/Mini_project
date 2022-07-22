@@ -83,16 +83,30 @@ input, button {
 #new-task-upload {
     position: relative;
 	left: 1175px;
-	top: -580px;
-	color: yellowgreen;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: yellow;
 	font-size: 1.25rem;
 	font-weight: 700;
 	cursor: pointer;
+	border: 2px solid yellow;
+}
+
+#new-task-generate {
+    position: relative;
+	left: 1200px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: greenyellow;
+	font-size: 1.25rem;
+	font-weight: 700;
+	cursor: pointer;
+	border: 2px solid greenyellow;
 }
 
 main {
 	flex: 1 1 0%;
-	max-width: 800px;
+	max-width: 1500px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -163,4 +177,54 @@ main {
 
 .task .actions .delete {
 	color: crimson;
+}
+
+.task .actions .check {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+	margin: auto;
+}
+
+.task .actions .check:checked {
+	/* content: '✔'; */
+    background-color: green;
+    width: 20px;
+    height: 20px;
+	margin: auto;
+}
+
+/* input[type="checkbox"] + label {
+    display: inline-block;
+    border: 1px solid #000;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+input[type="checkbox"]:checked + label:after {
+    content: '✔';
+    display: inline-block;
+    font-size: 1.6em;
+} */
+
+.task .actions .budget{
+	background-color: white;
+	border-color: green;
+	/* margin-right: auto; */
+	font-size: 15px;
+	margin-left: 5px;
+	/* width: 50px; */
+}
+
+.task .actions .sub{
+	/* padding: 200px; */
+	margin-left: 5px;
+	width: 200px;
+	height: 25px;
+	/* box-sizing: border-box; */
+	/* border: 5px solid #ccc; */
+	/* border-radius: 4px; */
+	background-color: #f8f8f8;
+	font-size: 15px;
+	resize: none;
 }
